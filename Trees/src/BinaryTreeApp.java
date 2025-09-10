@@ -2,19 +2,19 @@ public class BinaryTreeApp {
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
 
+        tree.insert(7);
+        tree.insert(2);
+        tree.insert(10);
+        tree.insert(8);
         tree.insert(5);
         tree.insert(3);
+        tree.insert(6);
         tree.insert(4);
-        tree.insert(9);
-        tree.insert(8);
-        tree.insert(2);
+        tree.insert(1);
 
         System.out.println();
 
-        tree.display();
-        tree.delete(9);
-        System.out.println("tralalero tralala");
-        tree.display();
-
+        //tree.display();
+        tree.postOrder(tree.root);
     }
 }

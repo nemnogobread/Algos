@@ -44,21 +44,17 @@ public class MyOrderedArray {
         int right = N - 1;
         int cur;
 
-        while(true){
+        while(right - left > 1){
             cur = (left + right) / 2;
 
-            if (arr[cur] == value){
-                return cur;
-            }
-            if (right - left == 1 && arr[right] > value && arr[left] < value){
-                return right;
-            }
-            if (arr[cur] < value){
-                left = cur;
-            } else {
+            if (arr[cur] > value){
                 right = cur;
+            } else {
+                left = cur;
             }
         }
+
+        return right;
     }
 
     public int find(int value) {

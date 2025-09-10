@@ -96,14 +96,6 @@ public class BinaryTree {
         return cur;
     }
 
-    public void inOrder(Node localRoot){
-        if (localRoot != null){
-            inOrder(localRoot.left);
-            System.out.print(localRoot.data + " ");
-            inOrder(localRoot.right);
-        }
-    }
-
     private Node getSuccessor(Node delNode){
         Node successorParent = delNode;
         Node successor = delNode.right;
@@ -143,5 +135,21 @@ public class BinaryTree {
         System.out.println(node.data);
 
         displayRecursive(node.left, level + 1);
+    }
+
+    public void inOrder(Node localRoot){
+        if (localRoot != null){
+            inOrder(localRoot.left);
+            System.out.print(localRoot.data + " ");
+            inOrder(localRoot.right);
+        }
+    }
+
+    public void postOrder(Node localRoot){
+        if (localRoot != null){
+            System.out.print(localRoot.data + " ");
+            inOrder(localRoot.left);
+            inOrder(localRoot.right);
+        }
     }
 }
