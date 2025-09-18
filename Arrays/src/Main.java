@@ -19,9 +19,5 @@ public class Main {
 
         System.out.println(myArray.find(2));
 
-        myArray.mergeSort(0, myArray.size() - 1);
-
-        myArray.display();
-
     }
 }
